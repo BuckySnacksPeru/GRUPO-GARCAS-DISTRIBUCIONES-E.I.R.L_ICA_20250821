@@ -1,0 +1,65 @@
+{
+  "input_csv": "BD_PDV.csv",
+  "client_prefix": "GRUPO GARCAS DISTRIBUCIONES E.I.R.L.",
+  "filtros": {
+    "Departamentos": [
+      "Ica",
+      ""
+    ],
+    "Provincias": [
+      ""
+    ],
+    "Distritos": [
+      "LosAquijes",
+      "Ocucaje",
+      "Pachacutec",
+      "LaTingui",
+      "Parcona",
+      "Pueblonuevo",
+      "Salas",
+      "Subtanjalla",
+      "Tate",
+      "SanJuanBautista"
+    ],
+    "Ruta": []
+  },
+  "cluster": {
+    "vias_file": "vias_Peru.geojson",
+    "reference_point": [
+      -14.063862042227772,
+      -75.72905458919126
+    ],
+    "target_size": 60,
+    "min_size": 50,
+    "max_size": 80,
+    "max_routes": 500,
+    "buffer_m": 50,
+    "eps_metros": 500,
+    "fusion_dist_max": 800,
+    "distance_method": "planar"
+  },
+  "polygon": {
+    "polygon_buffer_m": 50,
+    "polygon_method": "convex",
+    "simplify_tolerance": 20,
+    "roads_buffer_m": 50,
+    "allow_multipolygon": false
+  },
+  "naming": {
+    "clean": "./insumos/{prefix}_Datalimpia_{datetime}.csv",
+    "cluster": "./insumos/{prefix}_Rutas_{datetime}.csv",
+    "polygons": "./insumos/{prefix}_Poligonos_{datetime}.geojson",
+    "public_points": "./data/{prefix}_PuntosPublicos_{datetime}.geojson",
+    "public_polygons": "./data/{prefix}_PoligonosPublicos_{datetime}.geojson"
+  },
+  "web": {
+    "map_center": [
+      -14.063862042227772,
+      -75.72905458919126
+    ],
+    "zoom_initial": 14,
+    "zoom_show_polygons": 13,
+    "zoom_show_labels": 15
+  },
+  "now": "20250821"
+}
